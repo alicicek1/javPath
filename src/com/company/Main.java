@@ -89,6 +89,7 @@ public class Main {
         */
 
         //GREENGROCER
+        /*
         final double apple = 3.67, banana = 0.95, eggplant = 5, tomato = 1.11, pineapple = 4.32;
         double finalPrice, kgApple, kgBanana, kgEggplant, kgTomato, kgPineapple;
 
@@ -108,9 +109,52 @@ public class Main {
 
         System.out.print("Pineapple : ");
         kgPineapple = scanner.nextDouble();
+        
 
         finalPrice = kgApple + kgBanana + kgEggplant + kgTomato + kgPineapple;
         System.out.print("Final Price : " + Rounder(finalPrice, 3));
+        */
+
+        //HACKERRANK
+        /*
+        int t = scanner.nextInt();
+
+        for (int i = 0; i < t; i++) {
+
+            try {
+                long x = scanner.nextLong();
+                System.out.println(x + " can be fitted in:");
+                if (x >= Short.MIN_VALUE && x <= Short.MAX_VALUE) System.out.println("* short");
+                if (x >= Long.MIN_VALUE && x <= Long.MAX_VALUE) System.out.println("* long");
+                if (x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE) System.out.println("* int");
+                else
+                    System.out.println(scanner.next() + " can't be fitted anywhere.");
+                //Complete the code
+            } catch (Exception e) {
+                System.out.println(scanner.next() + " can't be fitted anywhere.");
+            }
+
+        }
+        */
+
+
+        int a, b, c;
+
+        System.out.print("First number : ");
+        a = scanner.nextInt();
+        System.out.print("Second number : ");
+        b = scanner.nextInt();
+        System.out.print("1 => +\n2 => -\n3 => *\n4 => /\nSelect an operator :");
+        c = scanner.nextInt();
+        System.out.print("Result : ");
+        switch (c) {
+            case 1 -> System.out.println(a + b);
+            case 2 -> System.out.println(a - b);
+            case 3 -> System.out.println(a * b);
+            case 4 -> System.out.println(a / b);
+            default -> System.out.println("Select an valid operator!");
+        }
+
     }
 
     private static double Rounder(double value, int precision) {
