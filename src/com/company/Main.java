@@ -54,15 +54,21 @@ public class Main {
         }
 */
 
-        double r, circumference, area;
+        double r, circumference, area, a, areaOfSlice;
 
         System.out.print("Radius : ");
         r = scanner.nextDouble();
 
+        System.out.print("Slice angle : ");
+        a = scanner.nextDouble();
+
         circumference = 2 * Math.PI * r;
         area = Math.PI * Math.pow(r, 2);
+        areaOfSlice = (Math.PI * (Math.pow(r, 2) * a)) / 360;
 
-        System.out.println("Area of radius : " + area + "\nCircumference of radius : " + circumference);
+        System.out.println("Area of radius : " + area + "\nCircumference of radius : " + circumference + "\nArea of Slice : " + areaOfSlice);
+
+        System.out.println("Corretion => Total Area / 2 : " + area / 2);
 
     }
 
