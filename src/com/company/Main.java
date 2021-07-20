@@ -87,6 +87,30 @@ public class Main {
         index = weight / (Math.pow(height, 2));
         System.out.print("Height-Mass Index : " + index);
         */
+
+        //GREENGROCER
+        final double apple = 3.67, banana = 0.95, eggplant = 5, tomato = 1.11, pineapple = 4.32;
+        double finalPrice, kgApple, kgBanana, kgEggplant, kgTomato, kgPineapple;
+
+        System.out.println("Please set value of product in KG!");
+
+        System.out.print("Apple : ");
+        kgApple = scanner.nextDouble();
+
+        System.out.print("Banana : ");
+        kgBanana = scanner.nextDouble();
+
+        System.out.print("Eggplant : ");
+        kgEggplant = scanner.nextDouble();
+
+        System.out.print("Tomato : ");
+        kgTomato = scanner.nextDouble();
+
+        System.out.print("Pineapple : ");
+        kgPineapple = scanner.nextDouble();
+
+        finalPrice = kgApple + kgBanana + kgEggplant + kgTomato + kgPineapple;
+        System.out.print("Final Price : " + Rounder(finalPrice, 3));
     }
 
     private static double Rounder(double value, int precision) {
