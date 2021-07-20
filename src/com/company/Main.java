@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 /*
+        //TAX
         double totalPrice, vatRate = 0.18, vatAmount, priceWithVat;
         System.out.print("Total Price : ");
         totalPrice = scanner.nextDouble();
@@ -19,7 +20,9 @@ public class Main {
         priceWithVat = totalPrice + vatAmount;
         System.out.println("Final Price => " + priceWithVat);
 */
+
 /*
+        //PYTHAGORAS
         int a, b;
         double c;
 
@@ -32,10 +35,12 @@ public class Main {
         System.out.println("Result : " + c);
 */
 
+/*
+        //TAXI
         final double kmPrice = 2.2;
         double totalJourneyKm, finalPrice, startPrice = 10;
 
-        System.out.print("JouneyKM : ");
+        System.out.print("JourneyKM : ");
         totalJourneyKm = scanner.nextDouble();
 
         finalPrice = kmPrice * totalJourneyKm;
@@ -47,6 +52,17 @@ public class Main {
             //System.out.println("You need to pay : " + String.format("%.2f", finalPrice) + "$");
             System.out.println("You need to pay : " + Rounder(finalPrice, 2) + "$");
         }
+*/
+
+        double r, circumference, area;
+
+        System.out.print("Radius : ");
+        r = scanner.nextDouble();
+
+        circumference = 2 * Math.PI * r;
+        area = Math.PI * Math.pow(r, 2);
+
+        System.out.println("Area of radius : " + area + "\nCircumference of radius : " + circumference);
 
     }
 
