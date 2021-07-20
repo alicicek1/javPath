@@ -8,8 +8,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-/*
+
         //TAX
+        /*
         double totalPrice, vatRate = 0.18, vatAmount, priceWithVat;
         System.out.print("Total Price : ");
         totalPrice = scanner.nextDouble();
@@ -19,10 +20,10 @@ public class Main {
 
         priceWithVat = totalPrice + vatAmount;
         System.out.println("Final Price => " + priceWithVat);
-*/
+        */
 
-/*
         //PYTHAGORAS
+        /*
         int a, b;
         double c;
 
@@ -33,10 +34,10 @@ public class Main {
 
         c = Math.sqrt((a * a) + (b * b));
         System.out.println("Result : " + c);
-*/
+        */
 
-/*
         //TAXI
+        /*
         final double kmPrice = 2.2;
         double totalJourneyKm, finalPrice, startPrice = 10;
 
@@ -52,7 +53,10 @@ public class Main {
             //System.out.println("You need to pay : " + String.format("%.2f", finalPrice) + "$");
             System.out.println("You need to pay : " + Rounder(finalPrice, 2) + "$");
         }
-*/
+        */
+
+        //AREA
+        /*
 
         double r, circumference, area, a, areaOfSlice;
 
@@ -69,7 +73,20 @@ public class Main {
         System.out.println("Area of radius : " + area + "\nCircumference of radius : " + circumference + "\nArea of Slice : " + areaOfSlice);
 
         System.out.println("Corretion => Total Area / 2 : " + area / 2);
+        */
 
+        //MASS INDEX
+        /*
+        double height, weight, index;
+
+        System.out.print("Height : ");
+        height = scanner.nextDouble();
+        System.out.print("Weight : ");
+        weight = scanner.nextDouble();
+
+        index = weight / (Math.pow(height, 2));
+        System.out.print("Height-Mass Index : " + index);
+        */
     }
 
     private static double Rounder(double value, int precision) {
