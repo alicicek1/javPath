@@ -3,7 +3,6 @@ package com.company;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -292,6 +291,8 @@ public class Main {
         System.out.print("Chinese Zodiac : " + zodiac);
         */
 
+        //REMAIN_YEAR
+        /*
         int year;
 
         System.out.print("Year : ");
@@ -307,6 +308,52 @@ public class Main {
                 System.out.println(year + " is not a remaining year !");
         } else
             System.out.println(year + " is not a remaining year !");
+        */
+
+        //EVEN FOR
+        /*
+        int number;
+
+        System.out.println("Number : ");
+        number = scanner.nextInt();
+
+        for (int i = 0; i <= number; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+        */
+
+        //EVEN WHILE
+        /*
+        int number, i;
+
+        System.out.println("Number : ");
+        number = scanner.nextInt();
+
+        i = 0;
+        while (i <= number) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+            i++;
+        }
+        */
+
+        //3-4
+
+        int number, i, amount = 0, count = 0;
+
+        System.out.println("Number : ");
+        number = scanner.nextInt();
+
+        for (i = 0; i <= number; i++) {
+            if (i % 3 == 0 || i % 4 == 0) {
+                amount += i;
+                count++;
+            }
+        }
+        System.out.print("Total Count Av : " + amount / count);
     }
 
     private static double Rounder(double value, int precision) {
