@@ -466,6 +466,21 @@ public class Main {
         System.out.println(total);
 
          */
+
+        //HARMONIC
+        /*
+        int number;
+        double total = 1;
+
+        System.out.println("Number : ");
+        number = scanner.nextInt();
+
+        for (int i = 2; i <= number; i++) {
+            total += (1.0 / i);
+        }
+        System.out.println("Result : " + total);
+
+         */
     }
 
     private static double Rounder(double value, int precision) {
