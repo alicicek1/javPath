@@ -387,6 +387,36 @@ public class Main {
         }
         System.out.println(total);
          */
+
+        //COMBINATION
+
+        int n, r, total = 0, fack = 1, tempFackN, tempFackR, tempFack;
+
+        System.out.println("N :");
+        n = scanner.nextInt();
+        System.out.println("R :");
+        r = scanner.nextInt();
+
+        for (int i = 2; i <= n; i++) {
+            fack = fack * i;
+        }
+        tempFackN = fack;
+        fack = 1;
+
+        for (int i = 2; i <= r; i++) {
+            fack = fack * i;
+        }
+        tempFackR = fack;
+        fack = 1;
+
+        for (int i = 2; i <= n - r; i++) {
+            fack = fack * i;
+        }
+        tempFack = fack;
+
+        total = tempFackN / tempFackR * (tempFack);
+        System.out.println(total);
+
     }
 
     private static double Rounder(double value, int precision) {
