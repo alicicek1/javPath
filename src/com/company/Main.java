@@ -482,6 +482,8 @@ public class Main {
 
          */
 
+        //DIAMOND
+        /*
         System.out.print("Number : ");
         int num = scanner.nextInt();
 
@@ -493,6 +495,32 @@ public class Main {
         for (int i = num / 2 - 1; i >= 1; i--) {
             MakeSpace(num, i);
         }
+
+         */
+
+        //MAX MIN
+        /*
+        int max = 0, min = 0, temp = 0;
+
+        System.out.print("How many number will you enter? => ");
+        int numberEntCount = scanner.nextInt();
+        int i = 1;
+        while (i <= numberEntCount) {
+            temp = scanner.nextInt();
+            if (i==1){
+                max=temp;
+                min=temp;
+            }
+
+            if (temp > max)
+                max = temp;
+            if (temp<min) min=temp;
+            i++;
+        }
+        System.out.println("Max : " + max);
+        System.out.println("Min : " + min);
+
+         */
     }
 
     private static void MakeSpace(int num, int i) {
