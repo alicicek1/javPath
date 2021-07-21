@@ -389,7 +389,7 @@ public class Main {
          */
 
         //COMBINATION
-
+        /*
         int n, r, total = 0, fack = 1, tempFackN, tempFackR, tempFack;
 
         System.out.println("N :");
@@ -416,7 +416,56 @@ public class Main {
 
         total = tempFackN / tempFackR * (tempFack);
         System.out.println(total);
+         */
 
+        //ARMSTRONG
+        /*
+
+        int number, tmpNumber, numberCounter = 0, initialVal, initialPow, res = 0;
+
+        System.out.print("Number : ");
+        number = scanner.nextInt();
+        tmpNumber = number;
+
+        do {
+            tmpNumber /= 10;
+            numberCounter++;
+        } while (tmpNumber != 0);
+
+        tmpNumber = number;
+        while (tmpNumber != 0) {
+            initialVal = tmpNumber % 10;
+
+            initialPow = 1;
+            for (int i = 0; i < numberCounter; i++) {
+                initialPow *= initialVal;
+            }
+            res += initialPow;
+            tmpNumber /= 10;
+        }
+
+        if (res == number) {
+            System.out.println(number + " is a Armstrong number.");
+        } else {
+            System.out.println(number + " is not a Armstrong number.");
+        }
+
+         */
+
+        //COUNTER
+        /*
+        int number, total = 0;
+
+        System.out.println("Number : ");
+        number = scanner.nextInt();
+
+        while (number != 0) {
+            total += number % 10;
+            number /= 10;
+        }
+        System.out.println(total);
+
+         */
     }
 
     private static double Rounder(double value, int precision) {
