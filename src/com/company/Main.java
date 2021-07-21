@@ -196,6 +196,8 @@ public class Main {
         }
         */
 
+        //FLIGHT TICKET
+        /*
         int age, ticketType;
         double km, totalPrice;
         final double consKm = 0.1;
@@ -236,6 +238,57 @@ public class Main {
                     throw new Exception("Invalid ticket type!");
             }
         }
+        */
+
+        int yearOfBirth, remain;
+        String zodiac;
+
+        System.out.print("Year : ");
+        yearOfBirth = scanner.nextInt();
+        remain = yearOfBirth % 12;
+
+        switch (remain) {
+            case 0:
+                zodiac = "Monkey";
+                break;
+            case 1:
+                zodiac = "Cock";
+                break;
+            case 2:
+                zodiac = "Dog";
+                break;
+            case 3:
+                zodiac = "Pig";
+                break;
+            case 4:
+                zodiac = "Rat";
+                break;
+            case 5:
+                zodiac = "Ox";
+                break;
+            case 6:
+                zodiac = "Tiger";
+                break;
+            case 7:
+                zodiac = "Rabbit";
+                break;
+            case 8:
+                zodiac = "Dragon";
+                break;
+            case 9:
+                zodiac = "Snake";
+                break;
+            case 10:
+                zodiac = "Horse";
+                break;
+            case 11:
+                zodiac = "Sheep";
+                break;
+            default:
+                zodiac = "Wrong value";
+                break;
+        }
+        System.out.print("Chinese Zodiac : " + zodiac);
     }
 
     private static double Rounder(double value, int precision) {
