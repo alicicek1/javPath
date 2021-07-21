@@ -111,7 +111,7 @@ public class Main {
 
         System.out.print("Pineapple : ");
         kgPineapple = scanner.nextDouble();
-        
+
 
         finalPrice = kgApple + kgBanana + kgEggplant + kgTomato + kgPineapple;
         System.out.print("Final Price : " + Rounder(finalPrice, 3));
@@ -481,6 +481,24 @@ public class Main {
         System.out.println("Result : " + total);
 
          */
+
+        System.out.print("Number : ");
+        int num = scanner.nextInt();
+
+        for (int i = 0; i <= (num / 2 + 1); i++) {
+            MakeSpace(num, i);
+        }
+
+        // N/2
+        for (int i = num / 2 - 1; i >= 1; i--) {
+            MakeSpace(num, i);
+        }
+    }
+
+    private static void MakeSpace(int num, int i) {
+        for (int j = 1; j <= num - i; j++) System.out.print(" ");
+        for (int j = 1; j <= 2 * i - 1; j++) System.out.print("*");
+        System.out.print("\n");
     }
 
     private static double Rounder(double value, int precision) {
