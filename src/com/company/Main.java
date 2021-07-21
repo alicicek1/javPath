@@ -521,6 +521,21 @@ public class Main {
         System.out.println("Min : " + min);
 
          */
+
+        //ANUMBER
+        /*
+        int total = 0;
+
+        System.out.println("Number : ");
+        int num = scanner.nextInt();
+
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) total += i;
+        }
+        if (num == total) System.out.println(num + " is a perfect number.");
+        else System.out.println(num + " is not a perfect number.");
+
+         */
     }
 
     private static void MakeSpace(int num, int i) {
