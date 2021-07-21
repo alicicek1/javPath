@@ -2,7 +2,9 @@ package com.company;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -159,6 +161,8 @@ public class Main {
         }
         */
 
+        //LOGIN
+        /*
         final String password = "123", username = "ali";
         String pointer, pwd, newPwd;
         boolean pwdCheck = true;
@@ -190,7 +194,48 @@ public class Main {
                 System.out.println("Try again.");
             }
         }
+        */
 
+        int age, ticketType;
+        double km, totalPrice;
+        final double consKm = 0.1;
+
+        System.out.print("Distance : ");
+        km = scanner.nextDouble();
+        if (km <= 0) {
+            throw new Exception("Invalid km!");
+        } else {
+            System.out.print("Your age : ");
+            age = scanner.nextInt();
+            if (age <= 0) {
+                throw new Exception("Invalid age!");
+            } else {
+                System.out.print("1 => One way \n2 => Return \nTicket Type : ");
+                ticketType = scanner.nextInt();
+
+                if (ticketType == 1 || ticketType == 2) {
+                    if (age <= 12) {
+                        totalPrice = km * consKm - km * consKm * 0.5;
+                    } else if (age > 12 && age <= 24) {
+                        totalPrice = km * consKm - km * consKm * 0.1;
+                    } else if (age >= 65) {
+                        totalPrice = km * consKm - km * consKm * 0.3;
+                    } else
+                        totalPrice = km * consKm;
+                    switch (ticketType) {
+                        case 1:
+                            break;
+                        case 2:
+                            totalPrice = (totalPrice - totalPrice * 0.2) * 2;
+                            break;
+                        default:
+                            break;
+                    }
+                    System.out.print("Total Price : " + Rounder(totalPrice, 2) + "$");
+                } else
+                    throw new Exception("Invalid ticket type!");
+            }
+        }
     }
 
     private static double Rounder(double value, int precision) {
@@ -200,5 +245,30 @@ public class Main {
         return bd.setScale(precision, RoundingMode.HALF_UP).doubleValue();
     }
 
+    public enum TicketType {
+        ONE_WAY(1),
+        RETURN(2);
+
+        private int value;
+        private static Map map = new HashMap<>();
+
+        private TicketType(int value) {
+            this.value = value;
+        }
+
+        static {
+            for (TicketType ticketType : TicketType.values()) {
+                map.put(ticketType.value, ticketType);
+            }
+        }
+
+        public static TicketType valueOf(int value) {
+            return (TicketType) map.get(value);
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
 
 }
