@@ -2,11 +2,12 @@ package com.company;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         //TAX
@@ -138,6 +139,8 @@ public class Main {
         */
 
 
+        //CALCULATOR
+        /*
         int a, b, c;
 
         System.out.print("First number : ");
@@ -153,6 +156,39 @@ public class Main {
             case 3 -> System.out.println(a * b);
             case 4 -> System.out.println(a / b);
             default -> System.out.println("Select an valid operator!");
+        }
+        */
+
+        final String password = "123", username = "ali";
+        String pointer, pwd, newPwd;
+        boolean pwdCheck = true;
+
+        System.out.print("Username : ");
+        if (!scanner.nextLine().equals(username)) {
+            System.out.println("Username is wrong");
+            throw new Exception("Username is wrong");
+        }
+
+        System.out.print("Password : ");
+        pwd = scanner.nextLine();
+        if (pwd != password) {
+            System.out.println("Password is wrong! Wanna change it? (Y/N)");
+            pointer = scanner.nextLine();
+            if (pointer.equals("Y") || pointer.equals("y")) {
+                do {
+                    System.out.println("New Password : ");
+                    newPwd = scanner.nextLine();
+                    if ((newPwd.equals(pwd)) || (newPwd.equals(password))) {
+                        System.out.println("Password has not changed!");
+                        throw new Exception("Password has not changed!");
+                    } else {
+                        pwdCheck = false;
+                        System.out.println("Password is changed.");
+                    }
+                } while (pwdCheck);
+            } else {
+                System.out.println("Try again.");
+            }
         }
 
     }
