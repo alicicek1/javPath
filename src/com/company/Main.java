@@ -357,6 +357,8 @@ public class Main {
 
          */
 
+        //4-2
+        /*
         int number, amount = 0;
         boolean checkOdd = true;
         do {
@@ -371,6 +373,20 @@ public class Main {
         } while (checkOdd);
 
         System.out.println("Total Amount : " + amount);
+        */
+
+        //FACTORIAL
+        /*
+        int number, total = 1;
+
+        System.out.println("Number : ");
+        number = scanner.nextInt();
+
+        for (int i = 2; i <= number; i++) {
+            total = total * i;
+        }
+        System.out.println(total);
+         */
     }
 
     private static double Rounder(double value, int precision) {
