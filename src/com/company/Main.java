@@ -341,7 +341,7 @@ public class Main {
         */
 
         //3-4
-
+        /*
         int number, i, amount = 0, count = 0;
 
         System.out.println("Number : ");
@@ -354,6 +354,23 @@ public class Main {
             }
         }
         System.out.print("Total Count Av : " + amount / count);
+
+         */
+
+        int number, amount = 0;
+        boolean checkOdd = true;
+        do {
+
+            System.out.print("Number : ");
+            number = scanner.nextInt();
+            if (number % 2 == 1) {
+                checkOdd = false;
+            } else if (number % 2 == 0 && number % 4 == 0)
+                amount += number;
+
+        } while (checkOdd);
+
+        System.out.println("Total Amount : " + amount);
     }
 
     private static double Rounder(double value, int precision) {
